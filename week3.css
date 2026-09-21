@@ -1,0 +1,21 @@
+/* External stylesheet for the four heading cells */
+
+/* Name of the Film - color name */
+.film {
+    background-color: lightyellow;
+}
+
+/* Year of the Film - hexadecimal */
+.year {
+    background-color: #ADD8E6;
+}
+
+/* Leading Actress - RGB */
+.actress {
+    background-color: rgb(221, 160, 221);
+}
+
+/* Leading Actor - repeat the color-name method */
+.actor {
+    background-color: lightgreen;
+}
