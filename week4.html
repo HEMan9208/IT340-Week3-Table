@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>UCID Validator</title>
+
+    <script>
+        function validateUCID() {
+
+            // Get the UCID entered by the user
+            let ucid = document.getElementById("ucid").value;
+
+            // Regular expression for exactly 2 letters and 2 numbers
+            let validPattern = /^[A-Za-z]{2}[0-9]{2}$/;
+
+            // Regular expression to check for a combination
+            // of letters and numbers
+            let combinationPattern = /^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]+$/;
+
+            // Check for exactly 2 letters followed by exactly 2 numbers
+            if (validPattern.test(ucid)) {
+
+                alert("VALID UCID FORMAT AND UCID FOUND");
+
+            // Check if it contains both letters and numbers
+            } else if (combinationPattern.test(ucid)) {
+
+                alert("VALID UCID FORMAT BUT INVALID UCID!");
+
+            // Everything else is an invalid format
+            } else {
+
+                alert("UCID DOES NOT CONFORM TO VALID FORMAT! RE-ENTER");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>UCID Validator</h1>
+
+    <form>
+
+        <label for="ucid">UCID:</label>
+
+        <input
+            type="text"
+            id="ucid"
+            name="ucid"
+            placeholder="Enter UCID"
+            title="Enter exactly 2 letters followed by exactly 2 numbers"
+        >
+
+        <button type="button" onclick="validateUCID()">
+            Submit
+        </button>
+
+    </form>
+
+</body>
+
+</html>
