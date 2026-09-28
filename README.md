@@ -1,4 +1,4 @@
-# IT340-Week3-Table
+# IT202-Week3-Table
 Week 3 HTML and CSS table assignment
 
 ## Website
