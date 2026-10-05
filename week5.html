@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Show and Hide</title>
+</head>
+
+<body>
+
+    <h2>Password Show/Hide</h2>
+
+    <label for="password">Enter Password:</label>
+    <br><br>
+
+    <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        onclick="togglePassword()"
+	style="background-color: lightgray;"
+    >
+
+    <script>
+    function togglePassword() {
+        let passwordBox = document.getElementById("password");
+
+        if (passwordBox.type === "password") {
+            passwordBox.type = "text";
+            passwordBox.style.backgroundColor = "lightgreen";
+        } else {
+            passwordBox.type = "password";
+            passwordBox.style.backgroundColor = "lightgray";
+        }
+    }
+    </script>
+
+</body>
+</html>
