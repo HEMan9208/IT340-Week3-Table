@@ -1,3 +1,7 @@
+week 6
+## Website
+https://web.njit.edu/~he83/week6.html
+
 Week 5
 ## WEbsite
 https://web.njit.edu/~he83/week5.html
