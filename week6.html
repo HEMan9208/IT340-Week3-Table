@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Mouseover Assignment</title>
+    <link rel="stylesheet" href="week6.css">
+</head>
+
+<body>
+
+    <h2>Week6</h2>
+
+    <p>
+        Move your mouse over the input box to display
+        the welcome message. Move your mouse away
+        to hide the message.
+    </p>
+
+    <input
+        type="text"
+        id="mouseBox"
+        placeholder="Hover over me!"
+        onmouseover="showHeading()"
+        onmouseout="hideHeading()"
+    >
+
+    <h1 id="myHeading">Welcome to my room</h1>
+
+    <script>
+        function showHeading() {
+            document.getElementById("myHeading").style.display = "block";
+        }
+
+        function hideHeading() {
+            document.getElementById("myHeading").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

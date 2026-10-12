@@ -1,0 +1,40 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: lightblue;
+    padding: 50px;
+}
+
+h2 {
+    color: darkblue;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+h1 {
+    display: none;
+    color: yellow;
+    background-color: purple;
+    font-size: 32px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto 0;
+    max-width: 500px;
+}
