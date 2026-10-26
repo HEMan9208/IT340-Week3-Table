@@ -1,6 +1,6 @@
 Week 8 
 ## Website
-https://web.njit.edu/~he83/Week8/week8_php_array/index.html?utm_source=chatgpt.com
+https://web.njit.edu/~he83/Week8/week8_php_array/index.html
 
 
 ## IT202 MySQL Assignment — SQL Queries
