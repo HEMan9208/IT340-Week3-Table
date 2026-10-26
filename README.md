@@ -1,3 +1,8 @@
+Week 8 
+## Website
+https://web.njit.edu/~he83/Week8/week8_php_array/index.html?utm_source=chatgpt.com
+
+
 ## IT202 MySQL Assignment — SQL Queries
 
 This assignment demonstrates six SQL queries using phpMyAdmin and a students database table.
