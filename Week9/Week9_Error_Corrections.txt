@@ -1,0 +1,68 @@
+Week Nine PHP/SQL Error Corrections
+
+Error 1 - Line 13
+Incorrect: <php
+Correction: <?php
+Reason: The PHP opening tag needs a question mark.
+
+Error 2 - Line 14
+Incorrect: require(connect.php)
+Correction: require('connect.php');
+Reason: The filename needs quotation marks and the statement needs a semicolon.
+
+Error 3 - Line 15
+Incorrect: / This code has 10 errors.
+Correction: // This code has 10 errors.
+Reason: A single-line PHP comment requires two forward slashes.
+
+Error 4 - Line 17
+Incorrect: if (isset ($Name)
+Correction: if (isset($name))
+Reason: PHP variables are case-sensitive and the condition needs a closing parenthesis.
+
+Error 5 - Line 19
+Incorrect: ‘Client Table’
+Correction: `Client Table`
+Reason: Use valid SQL identifier quoting for a table name containing a space, or the actual table name.
+
+Error 6 - Line 20
+Incorrect: mysqli_query($con, $sql)
+Correction: mysqli_query($con, $sql);
+Reason: A semicolon is missing.
+
+Error 7 - Line 21
+Incorrect: mysql_num_rows($result)
+Correction: mysqli_num_rows($result)
+Reason: Use mysqli rather than the obsolete mysql API.
+
+Error 8 - Line 22
+Incorrect: if($rows = 1)
+Correction: if ($rows == 1)
+Reason: Use comparison rather than assignment.
+
+Error 9 - Line 24
+Incorrect: echo name;
+Correction: echo $name;
+Reason: Variables need a dollar sign.
+
+Error 10 - End of file
+Incorrect: Missing closing brace.
+Correction: Add } to close the outer if block.
+Reason: Every opened conditional block must be closed.
+
+Corrected example:
+
+<?php
+require('connect.php');
+// Corrected PHP code
+$name = $_POST['name'];
+
+if (isset($name)) {
+    $sql = "SELECT * FROM `Client Table` WHERE Name='$name'";
+    $result = mysqli_query($con, $sql);
+    $rows = mysqli_num_rows($result);
+    if ($rows == 1) {
+        echo $name;
+    }
+}
+?>
