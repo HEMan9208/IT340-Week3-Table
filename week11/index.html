@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 11 - Email Confirmation</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 40px 16px; }
+    .form-box { background: white; max-width: 420px; margin: 40px auto; padding: 28px; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,.12); }
+    h1 { font-size: 24px; text-align: center; color: #243b53; }
+    label { display: block; font-weight: bold; margin-top: 18px; margin-bottom: 7px; }
+    input { box-sizing: border-box; width: 100%; padding: 11px; border: 1px solid #a9b5c4; border-radius: 5px; font-size: 16px; }
+    button { margin-top: 22px; width: 100%; background: #1769aa; border: 0; color: white; padding: 12px; border-radius: 5px; font-size: 16px; cursor: pointer; }
+    button:hover { background: #0f4f83; }
+    #message { min-height: 22px; margin-top: 15px; font-weight: bold; text-align: center; }
+    .error { color: #bb1d2c; }
+    .success { color: #18733c; }
+  </style>
+</head>
+<body>
+  <main class="form-box">
+    <h1>Email Confirmation Form</h1>
+    <form id="emailForm" novalidate>
+      <label for="email">Enter Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="confirmEmail">Confirm Email Address:</label>
+      <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Re-enter your email">
+
+      <button type="submit">Confirm</button>
+      <p id="message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script>
+    $(document).ready(function () {
+      $('#emailForm').on('submit', function (event) {
+        event.preventDefault();
+
+        const email = $('#email').val().trim();
+        const confirmEmail = $('#confirmEmail').val().trim();
+        const message = $('#message');
+        message.removeClass('error success');
+
+        if (email === '' || confirmEmail === '') {
+          message.addClass('error').text('Please enter both email addresses.');
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+                   !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(confirmEmail)) {
+          message.addClass('error').text('Please enter valid email addresses.');
+        } else if (email !== confirmEmail) {
+          message.addClass('error').text('Email addresses do not match.');
+        } else {
+          message.addClass('success').text('Email has been confirmed!');
+          alert('Email has been confirmed!');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
